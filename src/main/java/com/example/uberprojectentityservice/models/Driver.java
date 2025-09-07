@@ -29,6 +29,15 @@ public class Driver extends BaseModel{
     @OneToOne(mappedBy = "driver", cascade = CascadeType.ALL)
     private Car car;
 
+    @Enumerated(value = EnumType.STRING)
+    private DriverApprovalStatus driverApprovalStatus;
+
+    @OneToOne
+    private ExactLocation lastKnownLocation;
+
+    @OneToOne
+    private ExactLocation home;
+
     private String activeCity;
 
     @DecimalMin(value = "0.00", message = "Rating must be grater than or equal to 0.00")
