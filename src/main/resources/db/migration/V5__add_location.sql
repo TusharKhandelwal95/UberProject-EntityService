@@ -24,3 +24,5 @@ CREATE TABLE named_location
 
 ALTER TABLE named_location
     ADD CONSTRAINT FK_NAMEDLOCATION_ON_EXACT_LOCATION FOREIGN KEY (exact_location_id) REFERENCES exact_location (id);
+
+
